@@ -2,7 +2,10 @@ package com.epam.task2.controller;
 
 import com.epam.task1.data.DataSource;
 import com.epam.task2.Data.DataShapes;
+import com.epam.task2.entities.Circle;
+import com.epam.task2.entities.Rectangle;
 import com.epam.task2.entities.Shape;
+import com.epam.task2.entities.Triangle;
 import com.epam.task2.model.Shapes;
 import com.epam.task2.view.ShapesView;
 
@@ -47,6 +50,22 @@ public class Controller {
             case (2):
                 view.printResult("Total area = ", model.getTotalArea());
                 break;
+            case (3):
+                String moreMenu = "Y";
+                do {
+                    view.printSubMenu();
+                    view.printMessage("Choose a menu item (1-3):");
+                    int menuItem = getMenuItem();
+                    while (menuItem > 3 || menuItem < 1) {
+                        view.printMessage("Wrong number. Try again. ");
+                        menuItem = getMenuItem();
+                    }
+                    countReqiuredArea(menuItem);
+                    view.printMessage("Back to submenu? Y/N");
+                    moreMenu = scan.next();
+                } while (moreMenu.equalsIgnoreCase("Y"));
+
+                break;
             case (4):
                 view.printShapes("Sorting by area: ", model.sortByArea());
                 break;
@@ -56,6 +75,26 @@ public class Controller {
             case (6):
                 view.printMessage("Bye!");
                 System.exit(0);
+                break;
+            default:
+                System.out.println("Wrong number. Try again. ");
+                break;
+        }
+    }
+
+    private void countReqiuredArea(int number) {
+        switch (number) {
+            case (1):
+                Class rectClass = Rectangle.class;
+                view.printResult("Total area of all rectangles = ", model.getAreaBySameShapes(rectClass));
+                break;
+            case (2):
+                Class triangleClass = Triangle.class;
+                view.printResult("Total area of all triangles = ", model.getAreaBySameShapes(triangleClass));
+                break;
+            case (3):
+                Class circleClass = Circle.class;
+                view.printResult("Total area of all circles = ", model.getAreaBySameShapes(circleClass));
                 break;
             default:
                 System.out.println("Wrong number. Try again. ");
