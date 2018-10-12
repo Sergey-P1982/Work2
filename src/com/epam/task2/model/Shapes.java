@@ -6,6 +6,7 @@ import com.epam.task2.entities.Shape;
 
 
 import java.util.Arrays;
+import java.util.Comparator;
 
 public class Shapes {
     private Shape[] shapes;
@@ -49,7 +50,13 @@ public class Shapes {
 
     public Shape[] sortByColor() {
         Shape[] temp = DataShapes.getShapes();
-        Arrays.sort(temp, new ColorComparator());
+        Arrays.sort(temp, new Comparator<Shape>() {
+
+            @Override
+            public int compare(Shape o1, Shape o2) {
+                return o1.shapeColor.compareTo(o2.shapeColor);
+            }
+        });
 
         return temp;
     }
