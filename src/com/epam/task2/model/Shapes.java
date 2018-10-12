@@ -38,7 +38,6 @@ public class Shapes {
     public double getAreaBySameShapes(Class shapeClass) {
         Shape[] temp = new Shape[shapes.length];
         double areasBySameShapes = 0;
-
         for (int i = 0; i < shapes.length; i++) {
             if (shapeClass.getName() == shapes[i].getClass().getName()) {
                 areasBySameShapes += shapes[i].calcArea();

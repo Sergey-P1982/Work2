@@ -21,7 +21,7 @@ public class ShapesView {
         System.out.println("1. Calculate of the total area of all rectangles.");
         System.out.println("2. Calculate of the total area of all triangles.");
         System.out.println("3. Calculate of the total area of all circles.");
-        System.out.println("4. Exit to shape's menu.");
+        System.out.println("4. Exit to common shape's menu.");
     }
 
     public void printShapes(String message, Shape[] shapes) {
