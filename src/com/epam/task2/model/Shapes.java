@@ -53,8 +53,8 @@ public class Shapes {
         Arrays.sort(temp, new Comparator<Shape>() {
 
             @Override
-            public int compare(Shape o1, Shape o2) {
-                return o1.shapeColor.compareTo(o2.shapeColor);
+            public int compare(Shape shape1, Shape shape2) {
+                return shape1.shapeColor.compareTo(shape2.shapeColor);
             }
         });
 
