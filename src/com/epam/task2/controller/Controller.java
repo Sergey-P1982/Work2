@@ -1,6 +1,5 @@
 package com.epam.task2.controller;
 
-import com.epam.task1.data.DataSource;
 import com.epam.task2.Data.DataShapes;
 import com.epam.task2.entities.Circle;
 import com.epam.task2.entities.Rectangle;
@@ -54,9 +53,9 @@ public class Controller {
                 String moreMenu = "Y";
                 do {
                     view.printSubMenu();
-                    view.printMessage("Choose a menu item (1-3):");
+                    view.printMessage("Choose a menu item (1-4):");
                     int menuItem = getMenuItem();
-                    while (menuItem > 3 || menuItem < 1) {
+                    while (menuItem > 4 || menuItem < 1) {
                         view.printMessage("Wrong number. Try again. ");
                         menuItem = getMenuItem();
                     }
@@ -95,6 +94,9 @@ public class Controller {
             case (3):
                 Class circleClass = Circle.class;
                 view.printResult("Total area of all circles = ", model.getAreaBySameShapes(circleClass));
+                break;
+            case (4):
+                run();
                 break;
             default:
                 System.out.println("Wrong number. Try again. ");
