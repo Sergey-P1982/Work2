@@ -18,16 +18,14 @@ public class Rectangle extends Shape {
 
     @Override
     public void draw() {
-        System.out.println("A rectangle was drew");
+        super.draw();
 
     }
 
     @Override
     public String toString() {
-        return "Rectangle{" +
-                "sideA=" + sideA +
-                ", sideB=" + sideB +
-                ", shapeColor='" + shapeColor + '\'' +
-                '}';
+        return super.toString() +
+                ", sideA=" + sideA +
+                ", sideB=" + sideB + '}';
     }
 }

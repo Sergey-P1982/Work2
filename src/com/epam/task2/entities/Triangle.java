@@ -17,16 +17,15 @@ public class Triangle extends Shape {
 
     @Override
     public void draw() {
-        System.out.println("A triangle was drew");
+        super.draw();
 
     }
 
     @Override
     public String toString() {
-        return "Triangle{" +
-                "base=" + base +
+        return super.toString() +
+                ", base=" + base +
                 ", height=" + height +
-                ", shapeColor='" + shapeColor + '\'' +
                 '}';
     }
 }

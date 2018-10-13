@@ -6,10 +6,15 @@ public abstract class Shape implements Drawable {
     public Shape (String colorShape) {
         this.shapeColor = colorShape;
     }
-    public abstract double calcArea () ;
+    public abstract double calcArea ();
+
+    @Override
+    public void draw () {
+        System.out.println(toString() + ". Its area = " + calcArea());
+    }
 
     @Override
     public String toString() {
-        return "Shape is " + this.shapeColor;
+        return this.getClass().getSimpleName() +" {color - " + this.shapeColor;
     }
 }

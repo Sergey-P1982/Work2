@@ -6,7 +6,7 @@ public class ShapesView {
 
     public void printMenu() {
 
-        System.out.println("Welcome to the shape's menu:");
+        System.out.println("Welcome to the shapes menu:");
         System.out.println("1. Print data set.");
         System.out.println("2. Calculate the total area of all figures in the data set.");
         System.out.println("3. Calculate the total area of figures of a given type.");
@@ -17,7 +17,7 @@ public class ShapesView {
 
     public void printSubMenu() {
 
-        System.out.println("Welcome to the area's submenu:");
+        System.out.println("Welcome to the shape area submenu:");
         System.out.println("1. Calculate of the total area of all rectangles.");
         System.out.println("2. Calculate of the total area of all triangles.");
         System.out.println("3. Calculate of the total area of all circles.");
@@ -27,7 +27,7 @@ public class ShapesView {
     public void printShapes(String message, Shape[] shapes) {
         System.out.println(message);
         for (Shape shape : shapes) {
-            System.out.println(shape);
+            shape.draw();
 
         }
     }

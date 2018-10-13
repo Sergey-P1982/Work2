@@ -16,15 +16,13 @@ public class Circle extends Shape {
 
     @Override
     public void draw() {
-        System.out.println("A circle was drew");
+        super.draw();
 
     }
 
     @Override
     public String toString() {
-        return "Circle{" +
-                "radius=" + radius +
-                ", shapeColor='" + shapeColor + '\'' +
-                '}';
+        return super.toString() +
+                ", radius=" + radius + '}';
     }
 }

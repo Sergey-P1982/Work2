@@ -1,4 +1,4 @@
-package com.epam.task2.Data;
+package com.epam.task2.data;
 
 import com.epam.task2.entities.Circle;
 import com.epam.task2.entities.Rectangle;

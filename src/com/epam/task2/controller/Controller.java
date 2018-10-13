@@ -1,9 +1,8 @@
 package com.epam.task2.controller;
 
-import com.epam.task2.Data.DataShapes;
+import com.epam.task2.data.DataShapes;
 import com.epam.task2.entities.Circle;
 import com.epam.task2.entities.Rectangle;
-import com.epam.task2.entities.Shape;
 import com.epam.task2.entities.Triangle;
 import com.epam.task2.model.Shapes;
 import com.epam.task2.view.ShapesView;
